@@ -13,9 +13,21 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+tmp/
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
 # Go workspace file
 go.work
+
+# Mac filesystem jank.
+.DS_Store
+
+# Go code coverage.
+coverage.out
+coverage
+
+# Go templ templating system
+*_templ.go
+*_templ.txt

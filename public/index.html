@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>htmx-intro</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="public/js/htmx.js"></script>
+        <link rel="stylesheet" href="public/css/pico.min.css" />
+        <link rel="stylesheet" href="public/css/style.css" />
+    </head>
+
+    <body>
+        <main class="container-fluid">
+            <button hx-get="/ticket" hx-swap="outerHTML">Get Ticket</button>
+        </main>
+    </body>
+</html>

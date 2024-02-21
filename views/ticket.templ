@@ -1,0 +1,15 @@
+package views
+
+import "strconv"
+
+templ Ticket(count int) {
+	<div>
+		if count > 1 {
+			{ strconv.Itoa(count) } Available Tickets
+		} else if count == 1 {
+			{ strconv.Itoa(count) } Available Ticket
+		} else {
+			No Available Ticket
+		}
+	</div>
+}
