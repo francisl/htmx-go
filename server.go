@@ -2,7 +2,6 @@ package main
 
 import (
 	"htmx-go-intro/views"
-	"net/http"
 
 	"github.com/labstack/echo/v4"
 )
