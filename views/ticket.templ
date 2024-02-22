@@ -3,7 +3,7 @@ package views
 import "strconv"
 
 templ Ticket(count int) {
-	<div>
+	<div class="ticket">
 		if count > 1 {
 			{ strconv.Itoa(count) } Available Tickets
 		} else if count == 1 {

@@ -1,9 +1,21 @@
 html {}
 
 body {
-    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.content {
+    background-color: lightgray;
+    border: thin solid darkgray;
+    padding: 0 8px;
+}
+
+.ticket {
+    background-color: gray;
+    border: thin dotted darkgray;
+    color: lightgray;
+    margin: 4px 0px;
 }
