@@ -1,0 +1,77 @@
+package views
+
+import (
+    r "htmx-go-intro/reviews"
+    "strconv"
+)
+
+templ Review (review r.Review) {
+        <td>{ review.Presentation }</td>
+        <td>
+            { strconv.Itoa(review.Rating) }
+        </td>
+        <td>
+            { review.TheGood }
+            <hr />
+            { review.TheBad }
+        </td>
+        <td>
+            { review.Presenter }
+        </td>
+        <td>
+            { review.CreatedAt.Format("2006/01/02") }
+        </td>
+        <td
+            hx-delete={ "/reviews/" + strconv.Itoa(review.Id)}
+            hx-target={ "#review-id-" + strconv.Itoa(review.Id) }
+            hx-confirm="Are you sure you wish to delete this review?"
+            onMouseOver="this.style.cursor='pointer'">
+            ❌
+        </td>
+}
+
+templ Reviews (reviews []r.Review) {
+    <div>
+        <h2>Reviews</h2>
+        <table id="reviews-table" class="striped">
+            <thead>
+                <tr>
+                <th scope="col">Presentation</th>
+                <th scope="col">Rating</th>
+                <th scope="col">The Good/The Bad</th>
+                <th scope="col">Presenter</th>
+                <th scope="col">Date</th>
+                <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="reviews-table-tbody">
+                for _, review := range reviews {
+                    <tr id={ "review-id-" + strconv.Itoa(review.Id) }>@Review(review)</tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+templ ReviewForm (){
+    <form hx-post="/reviewform">
+        <input type="text" name="presentation" placeholder="Presentation" required />
+        <select type="number" name="rating" required>
+            <option selected="selected">5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+        </select>
+
+        <textarea type="text" name="good" placeholder="The Good" required />
+        <textarea type="text" name="bad" placeholder="The Bad" required />
+        <input type="text" name="presenter" placeholder="Presenter" required />
+        <input type="submit" value="Submit" />
+    </form>
+}
+
+templ ReviewFormPost (review r.Review){
+    <tr id={ "review-id-" + strconv.Itoa(review.Id) } hx-swap-oob="beforeend:#reviews-table-tbody">@Review(review)</tr>
+    @ReviewForm()
+}
