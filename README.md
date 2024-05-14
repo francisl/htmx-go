@@ -15,14 +15,17 @@
 https://go.dev/dl/
 
 2. Install Dependencies
-> mkdir gohtmx
-> cd gohtmx
-> go mod init gohtmx
-> go install github.com/cosmtrek/air@latest
-> go install github.com/a-h/templ/cmd/templ@latest
-> go get github.com/a-h/templ
-> go get github.com/labstack/echo/v4
-> git clone git@github.com:francisl/htmx-go-intro.git -b intro-3
+
+```bash
+mkdir gohtmx
+cd gohtmx
+go mod init gohtmx
+go install github.com/cosmtrek/air@latest
+go install github.com/a-h/templ/cmd/templ@latest
+go get github.com/a-h/templ
+go get github.com/labstack/echo/v4
+git clone git@github.com:francisl/htmx-go-intro.git -b intro-3
+```
 
 3. Start the development server
 
