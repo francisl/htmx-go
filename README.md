@@ -14,6 +14,10 @@
 1. Install Go
 https://go.dev/dl/
 
+Nota. Make sure the go install app is in your $PATH
+e.g.
+> export $PATH=$PATH:~/go/bin
+
 2. Option 1 - Install a new project from scratch
 
 ```bash
@@ -38,8 +42,11 @@ go get github.com/labstack/echo/v4
 
 4. Start the development server
 
-The go compiler and runner
-> air
+In 2 differents terminal run :
 
 Template compiler
 > templ generate -watch 
+
+The go compiler and runner
+> air
+
