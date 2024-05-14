@@ -14,20 +14,29 @@
 1. Install Go
 https://go.dev/dl/
 
-2. Install Dependencies
+2. Option 1 - Install a new project from scratch
 
 ```bash
-mkdir gohtmx
-cd gohtmx
-go mod init gohtmx
+git clone git@github.com:francisl/htmx-go-intro.git -b intro-3
+cd htmx-go-intro 
+```
+
+2. Option 2 - Get Started with the intro project
+```sh
+git clone git@github.com:francisl/htmx-go-intro.git -b intro-3
+cd htmx-go-intro 
+```
+
+3. Install Dependencies
+
+```sh
 go install github.com/cosmtrek/air@latest
 go install github.com/a-h/templ/cmd/templ@latest
 go get github.com/a-h/templ
 go get github.com/labstack/echo/v4
-git clone git@github.com:francisl/htmx-go-intro.git -b intro-3
 ```
 
-3. Start the development server
+4. Start the development server
 
 The go compiler and runner
 > air
