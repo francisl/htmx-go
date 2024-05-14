@@ -54,8 +54,7 @@ var reviews []Review = []Review{
 	},
 	{
 		Id:           4,
-		Presentation: "Fourth Review",
-		Rating:       2,
+		Presentation: "Fourth Review", Rating:       2,
 		TheGood:      "is this required?",
 		TheBad:       "Really, tailwindcss and fp programming are not mentioned.",
 		Presenter:    "Lorem Ipsum",
