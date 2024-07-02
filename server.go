@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/labstack/echo/v4"
-	"htmx-go-intro/utils"
 	"htmx-go-intro/views"
+
+	"github.com/labstack/echo/v4"
 )
 
 type State struct {
@@ -12,8 +12,6 @@ type State struct {
 
 func main() {
 	e := echo.New()
-	e.HTTPErrorHandler = utils.CustomHTTPErrorHandler
-
 	e.Static("/public", "public")
 
 	state := State{count: 0}

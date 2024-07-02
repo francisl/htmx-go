@@ -10,8 +10,88 @@
     </head>
 
     <body>
-        <main class="container-fluid">
-            <button hx-get="/ticket" hx-swap="outerHTML">Get Ticket</button>
+        <main class="container-fluid" >
+            <div class="grid">
+                <article>
+                    <header>
+                        <div class="grid">
+                            hx-outerHTML
+                            <button class="outline" hx-get="/ticket" hx-swap="outerHTML" hx-target="#result-content-outer">Fetch</button>
+                        </div>
+                    </header>
+                    <div id="result-content-outer" class="container-fluid content">
+                        <div>Placeholder</div>
+                    </div>
+                </article>
+
+                <article>
+                    <header>
+                        <div class="grid">
+                            hx-innerHTML
+                            <button class="outline" hx-get="/ticket" hx-swap="innerHTML" hx-target="#result-content-inner">Fetch</button>
+                        </div>
+                    </header>
+                    <div id="result-content-inner" class="container-fluid content">
+                        <div>Placeholder</div>
+                    </div>
+                </article>
+            </div>
+
+            <hr />
+
+            <div class="grid">
+                <article>
+                    <header>
+                        <div class="grid">
+                            afterbegin
+                            <button class="outline" hx-get="/ticket" hx-swap="afterbegin" hx-target="#result-content-afterbegin">Fetch</button>
+                        </div>
+                    </header>
+                    <div id="result-content-afterbegin" class="container-fluid content">
+                        <div>Placeholder</div>
+                    </div>
+                </article>
+
+                <article>
+                    <header>
+                        <div class="grid">
+                            beforeend
+                            <button class="outline" hx-get="/ticket" hx-swap="beforeend" hx-target="#result-content-beforeend">Fetch</button>
+                        </div>
+                    </header>
+                    <div id="result-content-beforeend" class="container-fluid content">
+                        <div>Placeholder</div>
+                    </div>
+                </article>
+            </div>
+
+            <hr />
+
+            <div class="grid">
+                <article>
+                    <header>
+                        <div class="grid">
+                            beforebegin
+                            <button class="outline" hx-get="/ticket" hx-swap="beforebegin" hx-target="#result-content-beforebegin">Fetch</button>
+                        </div>
+                    </header>
+                    <div id="result-content-beforebegin" class="container-fluid content">
+                        <div>Placeholder</div>
+                    </div>
+                </article>
+
+                <article>
+                    <header>
+                        <div class="grid">
+                            afterend
+                            <button class="outline" hx-get="/ticket" hx-swap="afterend" hx-target="#result-content-afterend">Fetch</button>
+                        </div>
+                    </header>
+                    <div id="result-content-afterend" class="container-fluid content">
+                        <div>Placeholder</div>
+                    </div>
+                </article>
+            </div>
         </main>
     </body>
 </html>
